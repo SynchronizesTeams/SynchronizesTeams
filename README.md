@@ -37,7 +37,7 @@
 ###
 
 <div align="center">
-  <img src="https://profile-counter.glitch.me/mhankbarbar/count.svg?"  />
+  <img src="https://profile-counter.glitch.me/SynchronizesTeams/count.svg?"  />
 </div>
 
 ###
