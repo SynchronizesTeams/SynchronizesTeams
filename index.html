@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>SynchronizeTeams</title>
+    <style>
+        @keyframes marquee {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-marquee {
+            display: flex;
+            white-space: nowrap;
+            animation: marquee 20s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-[#FEE9CE] flex flex-col min-h-screen">
+    <nav class="flex justify-around py-6 items-center border-b-4 bg-white">
+        <ul class="flex gap-10 font-['Poppins'] font-medium">
+            <li><a href="index.html">About Us</a></li>
+            <li><a href="index.html">Services</a></li>
+            <li><a href="index.html">Projects</a></li>
+        </ul>
+        <h1 class="font-['Poppins'] font-extrabold text-2xl">SynchronizeTeams</h1>
+        <div>
+            <div class="py-2 px-6 border-4 border-black">
+                <a href="" class="font-['Poppins'] font-medium">Let's Talk</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="py-10 px-20 flex-grow relative">
+        <h1 class="font-['Archivo Black'] font-extrabold mb-15 text-9xl">Where innovation meets collaboration.</h1>
+        <p class="font-['inter'] text-xl font-medium w-[50rem] mb-15">We're on a mission to drive forward in the tech world, bringing together dynamic minds and pioneering solutions.</p>
+        <div>
+            <div class="relative inline-block">
+                <div class="absolute top-[1rem] left-[1rem] w-[276px] h-[100px] bg-white border-4 border-black"></div>
+                <div class="relative px-6 py-3 bg-white justify-center items-center flex border-4 w-[276px] h-[100px] border-black">
+                  <p class="font-['Poppins'] text-4xl  font-medium">Let's Talk</p>
+                </div>
+              </div>
+        </div>
+
+        <div class="absolute top-[13rem] right-[15rem]">
+            <div class="relative">
+                <div class="absolute top-[1rem] left-[1rem] w-[445px] h-[445px] bg-black border-4 border-black"></div>
+                <div class="relative px-6 py-3 bg-white justify-center items-center flex border-4 w-[443px] h-[443px] border-black">
+                    <img src="icons8-synchronize-500.png" alt="">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="w-full h-[165px] bg-[#8F87F1] border-t-4 flex justify-center items-center">
+        <div class="overflow-hidden w-full  py-10">
+            <div class="animate-marquee space-x-10">
+                
+                <!-- 1 SET Konten -->
+                <div class="flex gap-5 items-center">
+                    <div class="w-[60px] h-[60px] flex items-center justify-center bg-white rounded-full border-4">
+                        <img src="icons8-synchronize-500.png" class="w-[45px] h-[45px]" alt="">
+                    </div>
+                    <p class="text-2xl font-medium text-white">Web Development</p>
+                </div>
+    
+                <div class="flex gap-5 items-center">
+                    <div class="w-[60px] h-[60px] flex items-center justify-center bg-white rounded-full border-4">
+                        <img src="icons8-synchronize-500.png" class="w-[45px] h-[45px]" alt="">
+                    </div>
+                    <p class="text-2xl font-medium text-white">Mobile Development</p>
+                </div>
+    
+                <div class="flex gap-5 items-center">
+                    <div class="w-[60px] h-[60px] flex items-center justify-center bg-white rounded-full border-4">
+                        <img src="icons8-synchronize-500.png" class="w-[45px] h-[45px]" alt="">
+                    </div>
+                    <p class="text-2xl font-medium text-white">Game Development</p>
+                </div>
+    
+                <div class="flex gap-5 items-center">
+                    <div class="w-[60px] h-[60px] flex items-center justify-center bg-white rounded-full border-4">
+                        <img src="icons8-synchronize-500.png" class="w-[45px] h-[45px]" alt="">
+                    </div>
+                    <p class="text-2xl font-medium text-white">Cyber Security</p>
+                </div>
+    
+                <div class="flex gap-5 items-center">
+                    <div class="w-[60px] h-[60px] flex items-center justify-center bg-white rounded-full border-4">
+                        <img src="icons8-synchronize-500.png" class="w-[45px] h-[45px]" alt="">
+                    </div>
+                    <p class="text-2xl font-medium text-white">AI/ML</p>
+                </div>
+    
+                <div class="flex gap-5 items-center">
+                    <div class="w-[60px] h-[60px] flex items-center justify-center bg-white rounded-full border-4">
+                        <img src="icons8-synchronize-500.png" class="w-[45px] h-[45px]" alt="">
+                    </div>
+                    <p class="text-2xl font-medium text-white">UI/UX Design</p>
+                </div>
+    
+                <!-- Duplikasi untuk efek infinite -->
+                <div class="flex gap-5 items-center">
+                    <div class="w-[60px] h-[60px] flex items-center justify-center bg-white rounded-full border-4">
+                        <img src="icons8-synchronize-500.png" class="w-[45px] h-[45px]" alt="">
+                    </div>
+                    <p class="text-2xl font-medium text-white">Web Development</p>
+                </div>
+    
+                <div class="flex gap-5 items-center">
+                    <div class="w-[60px] h-[60px] flex items-center justify-center bg-white rounded-full border-4">
+                        <img src="icons8-synchronize-500.png" class="w-[45px] h-[45px]" alt="">
+                    </div>
+                    <p class="text-2xl font-medium text-white">Mobile Development</p>
+                </div>
+    
+                <div class="flex gap-5 items-center">
+                    <div class="w-[60px] h-[60px] flex items-center justify-center bg-white rounded-full border-4">
+                        <img src="icons8-synchronize-500.png" class="w-[45px] h-[45px]" alt="">
+                    </div>
+                    <p class="text-2xl font-medium text-white">Game Development</p>
+                </div>
+    
+                <div class="flex gap-5 items-center">
+                    <div class="w-[60px] h-[60px] flex items-center justify-center bg-white rounded-full border-4">
+                        <img src="icons8-synchronize-500.png" class="w-[45px] h-[45px]" alt="">
+                    </div>
+                    <p class="text-2xl font-medium text-white">Cyber Security</p>
+                </div>
+    
+                <div class="flex gap-5 items-center">
+                    <div class="w-[60px] h-[60px] flex items-center justify-center bg-white rounded-full border-4">
+                        <img src="icons8-synchronize-500.png" class="w-[45px] h-[45px]" alt="">
+                    </div>
+                    <p class="text-2xl font-medium text-white">AI/ML</p>
+                </div>
+    
+                <div class="flex gap-5 items-center">
+                    <div class="w-[60px] h-[60px] flex items-center justify-center bg-white rounded-full border-4">
+                        <img src="icons8-synchronize-500.png" class="w-[45px] h-[45px]" alt="">
+                    </div>
+                    <p class="text-2xl font-medium text-white">UI/UX Design</p>
+                </div>
+    
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
