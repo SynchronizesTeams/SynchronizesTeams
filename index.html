@@ -185,10 +185,16 @@
     <!-- start mobile -->
     <nav class="md:hidden flex justify-between items-center p-4 bg-white border-b-4">
         <h1 class="font-['Poppins'] font-extrabold text-xl">SynchronizeTeams</h1>
-        <button id="menuButton" class="text-3xl">&#9776;</button>
+        <button id="menuToggle" class="md:hidden p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
     </nav>
 
-    <div id="mobileMenu" class="hidden md:hidden flex flex-col bg-white border-b-4 p-4">
+    <div id="mobileMenu" class="absolute top-[4.5rem] z-12 left-0 w-full bg-white border-b-4 p-4 flex flex-col origin-top scale-y-0 transition-transform duration-300 ease-in-out md:hidden">
         <a href="index.html" class="py-2">About Us</a>
         <a href="index.html" class="py-2">Services</a>
         <a href="index.html" class="py-2">Projects</a>
@@ -207,7 +213,7 @@
             </div>
         </div>
 
-        <h1 class="font-['Archivo Black'] font-extrabold text-5xl leading-tight">
+        <h1 class="font-['Archivo Black'] font-extrabold text-4xl leading-tight">
             Where innovation meets collaboration.
         </h1>
         <p class="font-['Inter'] text-lg font-medium mt-4">
@@ -257,7 +263,7 @@
         </div>
     </div>
     
-    <footer class="w-full h-[140px] absolute bottom-0 bg-[#8F87F1] border-t-4 border-b-4 md:hidden flex justify-center items-center">
+    <footer class="w-full h-[120px] absolute bottom-0 bg-[#8F87F1] border-t-4 border-b-4 md:hidden flex justify-center items-center">
         <div class="overflow-hidden w-full  py-10">
             <div class="animate-marquee space-x-10">
                 
@@ -354,9 +360,10 @@
     <!-- Footer Mobile -->
     
     <script>
-        document.getElementById("menuButton").addEventListener("click", function() {
-            let menu = document.getElementById("mobileMenu");
-            menu.classList.toggle("hidden");
+        document.getElementById("menuToggle").addEventListener("click", function () {
+            const menu = document.getElementById("mobileMenu");
+            menu.classList.toggle("scale-y-0");
+            menu.classList.toggle("scale-y-100");
         });
 
         //open modal mobile
