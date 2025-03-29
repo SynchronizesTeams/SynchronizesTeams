@@ -26,8 +26,8 @@
         }
     </style>
 </head>
-<body class="bg-[#FEE9CE] flex flex-col min-h-screen">
-    <nav class="flex justify-around py-6 items-center border-b-4 bg-white">
+<body class="bg-[#FEE9CE] flex flex-col h-screen overflow-hidden">
+    <nav class="hidden md:flex justify-around py-6 items-center border-b-4 bg-white">
         <ul class="flex gap-10 font-['Poppins'] font-medium">
             <li><a href="index.html">About Us</a></li>
             <li><a href="index.html">Services</a></li>
@@ -41,29 +41,54 @@
         </div>
     </nav>
 
-    <main class="py-10 px-20 flex-grow relative">
+    <main class="py-10 px-20 hidden md:block flex-grow relative">
         <h1 class="font-['Archivo Black'] font-extrabold mb-15 text-9xl">Where innovation meets collaboration.</h1>
         <p class="font-['inter'] text-xl font-medium w-[50rem] mb-15">We're on a mission to drive forward in the tech world, bringing together dynamic minds and pioneering solutions.</p>
         <div>
             <div class="relative inline-block">
+                <button id="openForm">
                 <div class="absolute top-[1rem] left-[1rem] w-[276px] h-[100px] bg-white border-4 border-black"></div>
-                <div class="relative px-6 py-3 bg-white justify-center items-center flex border-4 w-[276px] h-[100px] border-black">
-                  <p class="font-['Poppins'] text-4xl  font-medium">Let's Talk</p>
+                    <div class="relative px-6 py-3 bg-white justify-center items-center flex border-4 w-[276px] h-[100px] border-black">
+                      <p class="font-['Poppins'] text-4xl  font-medium">Let's Talk</p>
+                    </div>
                 </div>
-              </div>
+                </button>
         </div>
 
+        <!-- Logo -->
         <div class="absolute top-[13rem] right-[15rem]">
             <div class="relative">
                 <div class="absolute top-[1rem] left-[1rem] w-[445px] h-[445px] bg-black border-4 border-black"></div>
-                <div class="relative px-6 py-3 bg-white justify-center items-center flex border-4 w-[443px] h-[443px] border-black">
-                    <img src="icons8-synchronize-500.png" alt="">
+                <div class="relative flex justify-center items-center border-4 w-[443px] h-[443px] border-black bg-white overflow-hidden">
+                    <!-- Gambar (Akan turun ke bawah saat tombol ditekan) -->
+                    <img src="icons8-synchronize-500.png" alt="SynchronizeTeams" id="logoImage"
+                        class="absolute transition-all duration-700 transform translate-y-0 opacity-100">
+        
+                    <!-- Form (Awalnya tersembunyi) -->
+                    <div id="formContainer"
+                        class="absolute w-full h-full bg-white px-4 flex flex-col justify-center items-center opacity-0 translate-y-20 transition-all duration-700">
+                        <h2 class="text-2xl font-bold mb-4">Let's Talk</h2>
+                        <form class="w-[90%]">
+                            <label class="block text-lg font-medium mb-1">Name</label>
+                            <input type="text" class="w-full border-2 border-black p-2 rounded mb-4" placeholder="Your Name">
+        
+                            <label class="block text-lg font-medium mb-1">Email</label>
+                            <input type="email" class="w-full border-2 border-black p-2 rounded mb-4" placeholder="Your Email">
+        
+                            <label class="block text-lg font-medium mb-1">Message</label>
+                            <textarea class="w-full border-2 border-black p-2 rounded mb-4" rows="3"
+                                placeholder="Your Message"></textarea>
+        
+                            <button type="submit"
+                                class="w-full bg-black text-white p-2 rounded text-lg font-semibold">Send Message</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="w-full h-[165px] bg-[#8F87F1] border-t-4 flex justify-center items-center">
+    <footer class="w-full h-[165px] bg-[#8F87F1] border-t-4 hidden md:flex justify-center items-center">
         <div class="overflow-hidden w-full  py-10">
             <div class="animate-marquee space-x-10">
                 
@@ -156,5 +181,240 @@
             </div>
         </div>
     </footer>
+
+    <!-- start mobile -->
+    <nav class="md:hidden flex justify-between items-center p-4 bg-white border-b-4">
+        <h1 class="font-['Poppins'] font-extrabold text-xl">SynchronizeTeams</h1>
+        <button id="menuButton" class="text-3xl">&#9776;</button>
+    </nav>
+
+    <div id="mobileMenu" class="hidden md:hidden flex flex-col bg-white border-b-4 p-4">
+        <a href="index.html" class="py-2">About Us</a>
+        <a href="index.html" class="py-2">Services</a>
+        <a href="index.html" class="py-2">Projects</a>
+        <a href="" class="py-2 font-bold text-blue-600">Let's Talk</a>
+    </div>
+
+    <!-- Main Content for Mobile -->
+    <main class="py-8 px-6 md:hidden flex-grow text-center">
+        <!-- Logo/Image Section -->
+        <div class="mt-5 mb-10 flex justify-center">
+            <div class="relative">
+                <div class="absolute top-[0.5rem] left-[0.5rem] w-[200px] h-[200px] bg-black border-4 border-black"></div>
+                <div class="relative w-[198px] h-[198px] bg-white flex justify-center items-center border-4 border-black">
+                    <img src="icons8-synchronize-500.png" alt="SynchronizeTeams">
+                </div>
+            </div>
+        </div>
+
+        <h1 class="font-['Archivo Black'] font-extrabold text-5xl leading-tight">
+            Where innovation meets collaboration.
+        </h1>
+        <p class="font-['Inter'] text-lg font-medium mt-4">
+            We're on a mission to drive forward in the tech world, bringing together dynamic minds and pioneering solutions.
+        </p>
+
+        <!-- CTA Button -->
+        <div class="mt-6">
+            <button id="openModal">
+                <div class="relative inline-block">
+                    <div class="absolute top-[1rem] left-[1rem] w-[250px] h-[100px] bg-white border-4 border-black"></div>
+                    <div class="relative px-6 py-3 bg-white justify-center items-center flex border-4 w-[250px] h-[100px] border-black">
+                      <p class="font-['Poppins'] text-4xl  font-medium">Let's Talk</p>
+                    </div>
+                </div>
+            </button>
+        </div>
+
+        
+    </main>
+    <div id="modal" class="fixed inset-0 top-[10rem] bg-opacity-50 flex justify-center items-center hidden z-10">
+        <!-- Container Modal -->
+        <div id="modalContent" class="bg-white w-full h-full md:w-[90%] md:max-w-lg md:h-auto p-6 rounded-t-2xl md:rounded-lg shadow-lg border-4 border-black
+            transform translate-y-full transition-transform duration-300">
+            
+            <!-- Header Modal -->
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold">Let's Talk</h2>
+                <button id="closeModal" class="text-2xl font-bold">&times;</button>
+            </div>
+    
+            <!-- Form -->
+            <form>
+                <label class="block text-lg font-medium mb-1">Name</label>
+                <input type="text" class="w-full border-2 border-black p-2 rounded mb-4" placeholder="Your Name">
+    
+                <label class="block text-lg font-medium mb-1">Email</label>
+                <input type="email" class="w-full border-2 border-black p-2 rounded mb-4" placeholder="Your Email">
+    
+                <label class="block text-lg font-medium mb-1">Message</label>
+                <textarea class="w-full border-2 border-black p-2 rounded mb-4" rows="3" placeholder="Your Message"></textarea>
+    
+                <button type="submit" class="w-full bg-[#ae7aff] border-2 border-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] text-white p-2 rounded text-lg font-semibold">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </div>
+    
+    <footer class="w-full h-[140px] absolute bottom-0 bg-[#8F87F1] border-t-4 md:hidden flex justify-center items-center">
+        <div class="overflow-hidden w-full  py-10">
+            <div class="animate-marquee space-x-10">
+                
+                <!-- 1 SET Konten -->
+                <div class="flex gap-5 items-center">
+                    <div class="w-[60px] h-[60px] flex items-center justify-center bg-white rounded-full border-4">
+                        <img src="icons8-synchronize-500.png" class="w-[45px] h-[45px]" alt="">
+                    </div>
+                    <p class="text-2xl font-medium text-white">Web Development</p>
+                </div>
+    
+                <div class="flex gap-5 items-center">
+                    <div class="w-[60px] h-[60px] flex items-center justify-center bg-white rounded-full border-4">
+                        <img src="icons8-synchronize-500.png" class="w-[45px] h-[45px]" alt="">
+                    </div>
+                    <p class="text-2xl font-medium text-white">Mobile Development</p>
+                </div>
+    
+                <div class="flex gap-5 items-center">
+                    <div class="w-[60px] h-[60px] flex items-center justify-center bg-white rounded-full border-4">
+                        <img src="icons8-synchronize-500.png" class="w-[45px] h-[45px]" alt="">
+                    </div>
+                    <p class="text-2xl font-medium text-white">Game Development</p>
+                </div>
+    
+                <div class="flex gap-5 items-center">
+                    <div class="w-[60px] h-[60px] flex items-center justify-center bg-white rounded-full border-4">
+                        <img src="icons8-synchronize-500.png" class="w-[45px] h-[45px]" alt="">
+                    </div>
+                    <p class="text-2xl font-medium text-white">Cyber Security</p>
+                </div>
+    
+                <div class="flex gap-5 items-center">
+                    <div class="w-[60px] h-[60px] flex items-center justify-center bg-white rounded-full border-4">
+                        <img src="icons8-synchronize-500.png" class="w-[45px] h-[45px]" alt="">
+                    </div>
+                    <p class="text-2xl font-medium text-white">AI/ML</p>
+                </div>
+    
+                <div class="flex gap-5 items-center">
+                    <div class="w-[60px] h-[60px] flex items-center justify-center bg-white rounded-full border-4">
+                        <img src="icons8-synchronize-500.png" class="w-[45px] h-[45px]" alt="">
+                    </div>
+                    <p class="text-2xl font-medium text-white">UI/UX Design</p>
+                </div>
+    
+                <!-- Duplikasi untuk efek infinite -->
+                <div class="flex gap-5 items-center">
+                    <div class="w-[60px] h-[60px] flex items-center justify-center bg-white rounded-full border-4">
+                        <img src="icons8-synchronize-500.png" class="w-[45px] h-[45px]" alt="">
+                    </div>
+                    <p class="text-2xl font-medium text-white">Web Development</p>
+                </div>
+    
+                <div class="flex gap-5 items-center">
+                    <div class="w-[60px] h-[60px] flex items-center justify-center bg-white rounded-full border-4">
+                        <img src="icons8-synchronize-500.png" class="w-[45px] h-[45px]" alt="">
+                    </div>
+                    <p class="text-2xl font-medium text-white">Mobile Development</p>
+                </div>
+    
+                <div class="flex gap-5 items-center">
+                    <div class="w-[60px] h-[60px] flex items-center justify-center bg-white rounded-full border-4">
+                        <img src="icons8-synchronize-500.png" class="w-[45px] h-[45px]" alt="">
+                    </div>
+                    <p class="text-2xl font-medium text-white">Game Development</p>
+                </div>
+    
+                <div class="flex gap-5 items-center">
+                    <div class="w-[60px] h-[60px] flex items-center justify-center bg-white rounded-full border-4">
+                        <img src="icons8-synchronize-500.png" class="w-[45px] h-[45px]" alt="">
+                    </div>
+                    <p class="text-2xl font-medium text-white">Cyber Security</p>
+                </div>
+    
+                <div class="flex gap-5 items-center">
+                    <div class="w-[60px] h-[60px] flex items-center justify-center bg-white rounded-full border-4">
+                        <img src="icons8-synchronize-500.png" class="w-[45px] h-[45px]" alt="">
+                    </div>
+                    <p class="text-2xl font-medium text-white">AI/ML</p>
+                </div>
+    
+                <div class="flex gap-5 items-center">
+                    <div class="w-[60px] h-[60px] flex items-center justify-center bg-white rounded-full border-4">
+                        <img src="icons8-synchronize-500.png" class="w-[45px] h-[45px]" alt="">
+                    </div>
+                    <p class="text-2xl font-medium text-white">UI/UX Design</p>
+                </div>
+    
+            </div>
+        </div>
+    </footer>
+   
+    <!-- Footer Mobile -->
+    
+    <script>
+        document.getElementById("menuButton").addEventListener("click", function() {
+            let menu = document.getElementById("mobileMenu");
+            menu.classList.toggle("hidden");
+        });
+
+        //open modal mobile
+        const modal = document.getElementById("modal");
+        const modalContent = document.getElementById("modalContent");
+        const openModalBtn = document.getElementById("openModal");
+        const closeModalBtn = document.getElementById("closeModal");
+
+    openModalBtn.addEventListener("click", function () {
+        modal.classList.remove("hidden");
+        setTimeout(() => {
+            modalContent.classList.remove("translate-y-full");
+        }, 10);
+    });
+
+    function closeModal() {
+        modalContent.classList.add("translate-y-full");
+        setTimeout(() => {
+            modal.classList.add("hidden");
+        }, 300); // Sesuai dengan durasi animasi
+    }
+
+    closeModalBtn.addEventListener("click", closeModal);
+    modal.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+
+    //foorm desktop
+    const openFormBtn = document.getElementById("openForm");
+    const logoImage = document.getElementById("logoImage");
+    const formContainer = document.getElementById("formContainer");
+
+    let isFormVisible = false; // Status awal: gambar tampil, form tersembunyi
+
+    openFormBtn.addEventListener("click", function () {
+        if (!isFormVisible) {
+            // Turunkan gambar PNG ke bawah dan hilangkan dengan opacity
+            logoImage.classList.add("translate-y-[50rem]", "opacity-0");
+
+            // Setelah animasi selesai (0.7 detik), munculkan form
+            setTimeout(() => {
+                formContainer.classList.remove("opacity-0", "translate-y-20");
+            }, 700);
+
+        } else {
+            // Sembunyikan form dengan turun ke bawah
+            formContainer.classList.add("opacity-0", "translate-y-20");
+
+            // Setelah animasi selesai, munculkan kembali gambar dengan smooth
+            setTimeout(() => {
+                logoImage.classList.remove("translate-y-[50rem]", "opacity-0"); // Kembalikan posisi normal
+            }, 700);
+        }
+
+        isFormVisible = !isFormVisible; // Toggle status
+    });
+    </script>
 </body>
 </html>
