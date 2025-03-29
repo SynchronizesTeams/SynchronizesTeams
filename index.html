@@ -9,25 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>SynchronizeTeams</title>
     <link rel="icon" href="icons8-synchronize-500.png" type="image/x-icon">
-    <style>
-        @keyframes marquee {
-            from {
-                transform: translateX(0);
-            }
-            to {
-                transform: translateX(-50%);
-            }
-        }
-
-        .animate-marquee {
-            display: flex;
-            white-space: nowrap;
-            animation: marquee 20s linear infinite;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-[#FEE9CE] flex flex-col h-screen overflow-hidden">
-    <nav class="hidden md:flex justify-around py-6 items-center border-b-4 bg-white">
+    <nav class="hidden md:flex navbar-desktop justify-around py-6 2xl:py-4 items-center border-b-4 bg-white">
         <ul class="flex gap-10 font-['Poppins'] font-medium">
             <li><a href="index.html">About Us</a></li>
             <li><a href="index.html">Services</a></li>
@@ -42,7 +27,7 @@
     </nav>
 
     <main class="py-10 px-20 hidden md:block flex-grow relative">
-        <h1 class="font-['Archivo Black'] font-extrabold mb-15 text-9xl">Where innovation meets collaboration.</h1>
+        <h1 class="font-['Archivo Black'] font-extrabold mb-15 main-text text-9xl 2xl:text-8xl">Where innovation meets collaboration.</h1>
         <p class="font-['inter'] text-xl font-medium w-[50rem] mb-15">We're on a mission to drive forward in the tech world, bringing together dynamic minds and pioneering solutions.</p>
         <div>
             <div class="relative inline-block">
@@ -56,31 +41,31 @@
         </div>
 
         <!-- Logo -->
-        <div class="absolute top-[13rem] right-[15rem]">
+        <div class="absolute main-logo top-[13rem] right-[15rem] 2xl:top-[10rem] 2xl:right-[10rem]">
             <div class="relative">
-                <div class="absolute top-[1rem] left-[1rem] w-[450px] h-[450px] bg-black border-4 border-black"></div>
-                <div class="relative flex justify-center items-center border-4 w-[450px] h-[450px] border-black bg-white overflow-hidden">
+                <div class="absolute top-[1rem] left-[1rem] w-[450px] h-[450px] 2xl:h-[380px] 2xl:w-[380px] bg-black border-4 border-black"></div>
+                <div class="relative flex justify-center items-center border-4 w-[450px] h-[450px] 2xl:h-[380px] 2xl:w-[380px] border-black bg-white overflow-hidden">
                     <!-- Gambar (Akan turun ke bawah saat tombol ditekan) -->
                     <img src="icons8-synchronize-500.png" alt="SynchronizeTeams" id="logoImage"
                         class="absolute transition-all duration-700 transform translate-y-0 opacity-100">
         
                     <!-- Form (Awalnya tersembunyi) -->
                     <div id="formContainer"
-                        class="absolute w-full h-full bg-white px-4 flex flex-col justify-center items-center opacity-0 translate-y-20 transition-all duration-700">
-                        <h2 class="text-2xl font-bold mb-4">Let's Talk</h2>
+                        class="absolute w-full h-full bg-white  px-4 2xl:px-2 flex flex-col justify-center items-center opacity-0 translate-y-20 transition-all duration-700">
+                        <h2 class="text-2xl font-bold mb-4 2xl:mb-[10px]">Let's Talk</h2>
                         <form class="w-[90%]">
-                            <label class="block text-lg font-medium mb-1">Name</label>
-                            <input type="text" class="w-full border-2 border-black p-2 rounded mb-4" placeholder="Your Name">
+                            <label class="block text-lg 2xl:text-base font-medium mb-1">Name</label>
+                            <input type="text" class="w-full border-2 border-black p-2 2xl:p-[5px] 2xl:text-base rounded mb-4 2xl:mb-2" placeholder="Your Name">
         
-                            <label class="block text-lg font-medium mb-1">Email</label>
-                            <input type="email" class="w-full border-2 border-black p-2 rounded mb-4" placeholder="Your Email">
+                            <label class="block text-lg font-medium mb-1 2xl:text-base">Email</label>
+                            <input type="email" class="w-full border-2 border-black p-2 2xl:p-[5px] 2xl:text-base rounded mb-4 2xl:mb-2" placeholder="Your Email">
         
-                            <label class="block text-lg font-medium mb-1">Message</label>
-                            <textarea class="w-full border-2 border-black p-2 rounded mb-4" rows="3"
+                            <label class="2xl:text-base block text-lg font-medium mb-1">Message</label>
+                            <textarea class="w-full border-2 border-black p-2 2xl:p-[5px] 2xl:text-base rounded mb-4 2xl:mb-2" rows="3"
                                 placeholder="Your Message"></textarea>
         
                             <button type="submit"
-                                class="w-full bg-[#ae7aff] border-4 border-black text-white p-2 rounded text-lg font-semibold">Send Message</button>
+                                class="w-full bg-[#ae7aff] border-4 shadow-[5px_5px_0px_0px_rgba(0,0,0)] border-black text-white p-2 rounded text-lg font-semibold">Send Message</button>
                         </form>
                     </div>
                 </div>
@@ -88,7 +73,7 @@
         </div>
     </main>
 
-    <footer class="w-full h-[165px] bg-[#8F87F1] border-t-4 hidden md:flex justify-center items-center">
+    <footer class="w-full h-[165px] 2xl:h-[100px] bg-[#8F87F1] border-t-4 hidden md:flex justify-center items-center">
         <div class="overflow-hidden w-full  py-10">
             <div class="animate-marquee space-x-10">
                 
@@ -206,9 +191,12 @@
         <!-- Logo/Image Section -->
         <div class="mt-5 mb-10 flex justify-center">
             <div class="relative">
+                <!-- Bayangan Hitam -->
                 <div class="absolute top-[0.5rem] left-[0.5rem] w-[200px] h-[200px] bg-black border-4 border-black"></div>
-                <div class="relative w-[198px] h-[198px] bg-white flex justify-center items-center border-4 border-black">
-                    <img src="icons8-synchronize-500.png" alt="SynchronizeTeams">
+                
+                <!-- Kontainer Gambar -->
+                <div id="imageContainer" class="relative w-[198px] h-[198px] bg-white flex justify-center items-center border-4 border-black cursor-pointer transition-transform duration-500 ease-in-out">
+                    <img id="rotatingImage" src="icons8-synchronize-500.png" alt="SynchronizeTeams">
                 </div>
             </div>
         </div>

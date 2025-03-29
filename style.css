@@ -1,0 +1,41 @@
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    display: flex;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+}
+
+@media (min-width: 1920px) {
+    .navbar-desktop {
+        padding: 1.5rem;
+    }
+
+    .main-text {
+        font-size: 8rem;
+        line-height: 1;
+    }
+    .top-\[13rem\] {
+        top: 13rem /* 208px */;
+    }
+    .right-\[15rem\] {
+        right: 15rem /* 240px */;
+    }
+    .w-\[450px\] {
+        width: 450px;
+    }
+    .h-\[450px\] {
+        height: 450px;
+    }
+    #formContainer {
+        padding-left: 1rem /* 16px */;
+    padding-right: 1rem /* 16px */;
+    }
+}
