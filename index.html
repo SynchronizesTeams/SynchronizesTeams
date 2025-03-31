@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SynchronizeTeams</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body class="px-4 md:px-64">
+     <!-- Navbar -->
+     <nav class="w-full py-4 flex justify-center h-fit">
+        <header class="w-full md:pl-6 border-3 h-20 md:gap-10 flex items-center justify-between rounded-md bg-white">
+            <!-- Logo -->
+            <div class="flex w-full items-center justify-center">
+                <h1 class="font-['Poppins'] font-bold text-2xl">Synchr</h1>
+                <img src="icons8-synchronize-100.png" alt="" class="w-[23px]">
+                <h1 class="font-['Poppins'] font-bold text-2xl">nizeTeams</h1>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex h-full items-center">
+                <ul class="flex h-full items-center font-['Poppins'] font-semibold text-xl">
+                    <li class="w-42 border-l-2 h-full flex justify-center items-center bg-blue-200 transition hover:bg-blue-400">
+                        <a href="index.html" class="w-full h-full flex justify-center items-center">Home</a>
+                    </li>
+                    <li class="w-42 border-x-2 h-full flex justify-center items-center transition hover:bg-blue-400">
+                        <a href="about.html" class="w-full h-full flex justify-center items-center">About Us</a>
+                    </li>
+                    <li class="w-42 h-full flex justify-center items-center transition hover:bg-blue-400">
+                        <a href="contact.html" class="w-full h-full flex justify-center items-center">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Hamburger Menu (Mobile) -->
+            <button id="hamburger" class="md:hidden flex bg-blue-300 flex-col px-6 space-y-1 border-l-4 h-full justify-center">
+                <span class="block w-6 h-0.5 bg-black"></span>
+                <span class="block w-6 h-0.5 bg-black"></span>
+                <span class="block w-6 h-0.5 bg-black"></span>
+            </button>
+        </header>
+    </nav>
+    <div id="sidebar" class="fixed top-0 right-0 w-72 h-full border-l/2 bg-white shadow-lg transform translate-x-full transition-transform duration-300 px-4">
+        <button id="closeSidebar" class="p-4 justify-end flex text-xl font-bold">&#10006;</button>
+        <ul class="mt-4 font-semibold text-lg border-2 rounded-lg shadow-[5px_5px_0px_0px_rgba(0,0,0)] ">
+            <li class="px-4 py-6 border-b hover:bg-gray-200 flex justify-center"><a href="index.html">Home</a></li>
+            <li class="px-4 py-6 border-b hover:bg-gray-200 flex justify-center"><a href="about.html">About Us</a></li>
+            <li class="px-4 py-6 hover:bg-gray-200 flex justify-center"><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>    
+
+    <main class="w-full">
+        <div class="flex-col flex md:flex-row items-center mb-10">
+            <img src="images/banner2.png" alt="" class="w-[30rem]">
+            <div class="flex flex-col">
+                <p class="w-full flex justify-center font-['Poppins'] font-semibold text-2xl mb-5">Welcome to <span class="underline ml-[5px]">SynchronizeTeams</span></p>
+                <h2 class="font-['Poppins'] font-bold text-4xl text-center">Where <span class="text-blue-500">Innovation</span> Meets <span class="text-blue-500">Collaboration</span>.</h2>
+                <p class="w-full flex justify-center font-['Poppins'] mt-5 mb-5 text-center">
+                    We're on a mission to drive forward in the tech world, bringing together dynamic minds and pioneering.  Join us as we sync up ideas, technology, and teamwork to create a future where anything is possible.
+                </p>
+                <div class="w-full flex justify-center">
+                    <div id="card" class="w-full  md:w-1/2 h-24 bg-blue-200 shadow-[5px_5px_0px_0px_rgba(0,0,0)] px-2 border-3 rounded-sm">
+                        <div class="flex justify-around items-center h-full">
+                            <div>
+                                <h2 class="font-semibold text-2xl">+22</h2>
+                                <p class="text-lg font-semibold">Projects</p>
+                            </div>
+                            <div>
+                                <h2 class="font-semibold text-2xl">+15</h2>
+                                <p class="text-lg font-semibold">Members</p>
+                            </div>
+                            <div>
+                                <h2 class="font-semibold text-2xl">+4</h2>
+                                <p class="text-lg font-semibold">Divisions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h2 class="font-['Poppins'] font-bold text-4xl text-center">Our Services</h2>
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
