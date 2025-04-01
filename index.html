@@ -3,58 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <title>SynchronizeTeams</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-  <body>
-    <header>
-      <div class="container">
-        <div id="branding">
-          <h1><span class="highlight">SynchronizeTeams</span> <p>Web Design</p></h1>
-        </div>
-        <nav>
-          <ul>
-            <li class="current"><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+<body class="px-4 md:px-64">
+     <!-- Navbar -->
+     <nav class="w-full py-4 flex justify-center h-fit">
+        <header class="w-full md:pl-6 border-3 h-20 md:gap-10 flex items-center justify-between rounded-md bg-white">
+            <!-- Logo -->
+            <div class="flex w-full items-center justify-center">
+                <h1 class="font-['Poppins'] font-bold text-2xl">Synchr</h1>
+                <img src="icons8-synchronize-100.png" alt="" class="w-[23px]">
+                <h1 class="font-['Poppins'] font-bold text-2xl">nizeTeams</h1>
+            </div>
 
-    <section id="jumbotron">
-      <div class="container">
-        <h1>The Teams</h1>
-        <p class="title">Our Final Project</p>
-      </div>
-    </section>
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex h-full items-center">
+                <ul class="flex h-full items-center font-['Poppins'] font-semibold text-xl">
+                    <li class="w-42 border-l-2 h-full flex justify-center items-center bg-blue-200 transition hover:bg-blue-400">
+                        <a href="index.html" class="w-full h-full flex justify-center items-center">Home</a>
+                    </li>
+                    <li class="w-42 border-x-2 h-full flex justify-center items-center transition hover:bg-blue-400">
+                        <a href="about.html" class="w-full h-full flex justify-center items-center">About Us</a>
+                    </li>
+                    <li class="w-42 h-full flex justify-center items-center transition hover:bg-blue-400">
+                        <a href="contact.html" class="w-full h-full flex justify-center items-center">Contact</a>
+                    </li>
+                </ul>
+            </div>
 
-    <section id="newsletter">
-      <div class="container">
-        <h1>Follow Us</h1>
-      </div>
-    </section>
+            <!-- Hamburger Menu (Mobile) -->
+            <button id="hamburger" class="md:hidden flex bg-blue-300 flex-col px-6 space-y-1 border-l-4 h-full justify-center">
+                <span class="block w-6 h-0.5 bg-black"></span>
+                <span class="block w-6 h-0.5 bg-black"></span>
+                <span class="block w-6 h-0.5 bg-black"></span>
+            </button>
+        </header>
+    </nav>
+    <div id="sidebar" class="fixed top-0 right-0 w-72 h-full border-l/2 bg-white shadow-lg transform translate-x-full transition-transform duration-300 px-4">
+        <button id="closeSidebar" class="p-4 justify-end flex text-xl font-bold">&#10006;</button>
+        <ul class="mt-4 font-semibold text-lg border-2 rounded-lg shadow-[5px_5px_0px_0px_rgba(0,0,0)] ">
+            <li class="px-4 py-6 border-b hover:bg-gray-200 flex justify-center"><a href="index.html">Home</a></li>
+            <li class="px-4 py-6 border-b hover:bg-gray-200 flex justify-center"><a href="about.html">About Us</a></li>
+            <li class="px-4 py-6 hover:bg-gray-200 flex justify-center"><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>    
 
-    <section id="boxes">
-      <div class="container">
-        <div class="box">
-          <img src="img/instagram-logo.png" class="ig">
-          <h3><a href="https://www.instagram.com/synchronize_teams/" target="_blank">Instagram</a></h3>
+    <main class="w-full">
+        <div class="flex-col flex md:flex-row items-center mb-10">
+            <img src="images/banner2.png" alt="" class="w-[30rem]">
+            <div class="flex flex-col">
+                <p class="w-full flex justify-center font-['Poppins'] font-semibold text-2xl mb-5">Welcome to <span class="underline ml-[5px]">SynchronizeTeams</span></p>
+                <h2 class="font-['Poppins'] font-bold text-4xl text-center">Where <span class="text-blue-500">Innovation</span> Meets <span class="text-blue-500">Collaboration</span>.</h2>
+                <p class="w-full flex justify-center font-['Poppins'] mt-5 mb-5 text-center">
+                    We're on a mission to drive forward in the tech world, bringing together dynamic minds and pioneering.  Join us as we sync up ideas, technology, and teamwork to create a future where anything is possible.
+                </p>
+                <div class="w-full flex justify-center">
+                    <div id="card" class="w-full  md:w-1/2 h-24 bg-blue-200 shadow-[5px_5px_0px_0px_rgba(0,0,0)] px-2 border-3 rounded-sm">
+                        <div class="flex justify-around items-center h-full">
+                            <div>
+                                <h2 class="font-semibold text-2xl">+22</h2>
+                                <p class="text-lg font-semibold">Projects</p>
+                            </div>
+                            <div>
+                                <h2 class="font-semibold text-2xl">+15</h2>
+                                <p class="text-lg font-semibold">Members</p>
+                            </div>
+                            <div>
+                                <h2 class="font-semibold text-2xl">+4</h2>
+                                <p class="text-lg font-semibold">Divisions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="box">
-          <img src="img/github.png" class="github">
-          <h3><a href="https://github.com/SynchronizeTeams" target="_blank">Github</a></h3>
-        </div>
-        <div class="box">
-          <img src="img/twitter.png" class="twitter">
-          <h3><a href="https://twitter.com/Synchroniz89440" target="_blank">Twitter</a></h3>
-        </div>
-      </div>
-    </section>
 
-    <footer>
-      <p>SynchronizeTeams©</p>
-    </footer>
-  </body>
+        <section class="mb-20">
+            <h2 class="font-['Poppins'] font-bold text-4xl text-center">About us</h2>
+            <div>
+                <p class="w-full flex justify-center font-['Poppins'] mt-5 mb-5 font-semibold text-base text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quo eos vel. Est minus modi non fugiat dolorum sapiente debitis vero similique. Eius fugit similique quam laborum voluptas nihil in.</p>
+            </div>
+        </section>
+
+        <div class="mb-20">
+            <h2 class="font-['Poppins'] font-bold text-4xl text-center mb-20">Our Services</h2>
+            <div class="flex flex-col gap-20 ">
+                <div class="w-full flex justify-center gap-3">
+                    <!-- first service -->
+                    <div class="w-1/3 h-60 flex justify-center relative flex-col p-4 shadow-[-5px_5px_0px_0px_rgba(0,0,0)] px-2 border-3 rounded-sm">
+                        <div class="w-[5rem] h-[5rem] bg-red-400 absolute top-0 left-10 transform  -translate-y-1/2 rounded-lg flex items-center justify-center border-3">
+                            <img src="images/webdev.png" width="80%" alt="">
+                        </div>
+                        <h2 class="font-bold text-xl mb-5">Web Development</h2>
+                        <p class="font-semibold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex quo, fuga veniam consequatur voluptates reprehenderit est, quidem quia expedita consectetur quis maxime optio tempore! Quae nisi esse incidunt debitis cum.</p>
+                    </div>
+                    <!-- second services -->
+                    <div class="w-1/3 h-60 flex justify-center relative flex-col p-4 shadow-[-5px_5px_0px_0px_rgba(0,0,0)] px-2 border-3 rounded-sm">
+                        <div class="w-[5rem] h-[5rem] bg-red-400 absolute top-0 left-10 transform  -translate-y-1/2 rounded-lg flex items-center justify-center border-3">
+                            <img src="images/gamedev.png" width="80%" alt="">
+                        </div>
+                        <h2 class="font-bold text-xl mb-5">Game Development</h2>
+                        <p class="font-semibold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex quo, fuga veniam consequatur voluptates reprehenderit est, quidem quia expedita consectetur quis maxime optio tempore! Quae nisi esse incidunt debitis cum.</p>
+                    </div>
+                    <!-- third services -->
+                    <div class="w-1/3 h-60 flex justify-center relative flex-col p-4 shadow-[-5px_5px_0px_0px_rgba(0,0,0)] px-2 border-3 rounded-sm">
+                        <div class="w-[5rem] h-[5rem] bg-red-400 absolute top-0 left-10 transform  -translate-y-1/2 rounded-lg flex items-center justify-center border-3">
+                            <img src="images/mobiledev.png" width="80%" alt="">
+                        </div>
+                        <h2 class="font-bold text-xl mb-5">Mobile Development</h2>
+                        <p class="font-semibold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex quo, fuga veniam consequatur voluptates reprehenderit est, quidem quia expedita consectetur quis maxime optio tempore! Quae nisi esse incidunt debitis cum.</p>
+                    </div>
+                </div>
+                <div class="w-full flex justify-center gap-3">
+                    <!-- fourth service -->
+                    <div class="w-1/3 h-60 flex justify-center relative flex-col p-4 shadow-[-5px_5px_0px_0px_rgba(0,0,0)] px-2 border-3 rounded-sm">
+                        <div class="w-[5rem] h-[5rem] bg-red-400 absolute top-0 left-10 transform  -translate-y-1/2 rounded-lg flex items-center justify-center border-3">
+                            <img src="images/cysec.png" width="80%" alt="">
+                        </div>
+                        <h2 class="font-bold text-xl mb-5">Cyber Security</h2>
+                        <p class="font-semibold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex quo, fuga veniam consequatur voluptates reprehenderit est, quidem quia expedita consectetur quis maxime optio tempore! Quae nisi esse incidunt debitis cum.</p>
+                    </div>
+                    <!-- fifth services -->
+                    <div class="w-1/3 h-60 flex justify-center relative flex-col p-4 shadow-[-5px_5px_0px_0px_rgba(0,0,0)] px-2 border-3 rounded-sm">
+                        <div class="w-[5rem] h-[5rem] bg-red-400 absolute top-0 left-10 transform  -translate-y-1/2 rounded-lg flex items-center justify-center border-3">
+                            <img src="images/graphicdesign.png" width="80%" alt="">
+                        </div>
+                        <h2 class="font-bold text-xl mb-5">Graphic Design</h2>
+                        <p class="font-semibold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex quo, fuga veniam consequatur voluptates reprehenderit est, quidem quia expedita consectetur quis maxime optio tempore! Quae nisi esse incidunt debitis cum.</p>
+                    </div>
+                    <!-- sixth services -->
+                    <div class="w-1/3 h-60 flex justify-center relative flex-col p-4 shadow-[-5px_5px_0px_0px_rgba(0,0,0)] px-2 border-3 rounded-sm">
+                        <div class="w-[5rem] h-[5rem] bg-red-400 absolute top-0 left-10 transform  -translate-y-1/2 rounded-lg flex items-center justify-center border-3">
+                            <img src="images/videoediting.png" width="80%" alt="">
+                        </div>
+                        <h2 class="font-bold text-xl mb-5">Video Editing</h2>
+                        <p class="font-semibold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex quo, fuga veniam consequatur voluptates reprehenderit est, quidem quia expedita consectetur quis maxime optio tempore! Quae nisi esse incidunt debitis cum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section>
+            <h2 class="font-['Poppins'] font-bold text-4xl text-center">Testimonials</h2>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
 </html>
