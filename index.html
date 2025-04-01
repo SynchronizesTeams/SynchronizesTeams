@@ -8,6 +8,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <style>
+        .swiper-slide {
+            height: auto !important;
+            min-height: 25rem;
+            max-width: 25rem;
+        }
+
+        @media (max-width: 640px) {
+            .swiper-slide {
+                height: auto !important;
+                min-height: 25rem;
+                min-width: 100%;
+            }
+        }
+    </style>
+
 </head>
 <body class="px-4 md:px-64">
      <!-- Navbar -->
@@ -94,7 +112,7 @@
             <div class="md:flex flex-col gap-20 ">
                 <div class="w-full md:flex block justify-center gap-3">
                     <!-- first service -->
-                    <div class="md:w-1/3 h-60 flex justify-center mb-20 relative flex-col p-4 shadow-[-5px_5px_0px_0px_rgba(0,0,0)] px-2 border-3 rounded-sm">
+                    <div class="md:w-1/3 md:h-60 h-64 flex justify-center mb-20 relative flex-col p-4 shadow-[-5px_5px_0px_0px_rgba(0,0,0)] px-2 border-3 rounded-sm">
                         <div class="w-[5rem] h-[5rem] bg-red-400 absolute top-0 left-10 transform  -translate-y-1/2 rounded-lg flex items-center justify-center border-3">
                             <img src="images/webdev.png" width="80%" alt="">
                         </div>
@@ -147,13 +165,150 @@
             </div>
         </div>
 
-        <section>
-            <h2 class="font-['Poppins'] font-bold text-4xl text-center">Testimonials</h2>
+        <section class="mb-10">
+            <h2 class="font-['Poppins'] font-bold text-4xl text-center mb-10">Testimonials</h2>
+            <div class="relative w-full px-6">
+                <button id="prevBtn" class="hidden md:block absolute left-[-3rem] top-1/2 transform -translate-y-1/2 bg-blue-300 text-black w-[50px] h-[50px] border-2 shadow-[-5px_5px_0px_0px_rgba(0,0,0)] rounded-md z-10">
+                    &#9665;
+                </button>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper md:px-2 h-[50rem]">
+                        <!-- Testimonial 1 -->
+                        <div class="swiper-slide w-[25rem] h-[50rem] flex flex-col items-center justify-center shadow-[-5px_5px_0px_0px_rgba(0,0,0)] px-4 border-3 rounded-sm bg-white">
+                            <div class="h-1/2 w-full flex flex-col justify-center items-center">
+                                <div class="w-[60px] h-[60px] mb-5 rounded-full bg-red-400 border-2">
+                                    <img src="images/adly.jpg" alt="" class="w-[60px] h-[60px] rounded-full">
+                                </div>
+                                <h2 class="font-medium text-xl">Adly Fahreza</h2>
+                                <div class="flex text-yellow-400">
+                                    <p>&#9733;</p><p>&#9733;</p><p>&#9733;</p><p>&#9733;</p><p>&#9733;</p>
+                                </div>
+                            </div>
+                            <div class="h-1/2 w-full">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem distinctio quas, dicta, voluptate quidem eveniet aperiam eius reprehenderit optio dolores. Quasi, voluptatibus.</p>
+                            </div>
+                        </div>
+            
+                        <!-- Testimonial 2 -->
+                        <div class="swiper-slide w-[25rem] h-[50rem] flex flex-col items-center justify-center shadow-[-5px_5px_0px_0px_rgba(0,0,0)] px-4 border-3 rounded-sm bg-white">
+                            <div class="h-1/2 w-full flex flex-col justify-center items-center">
+                                <div class="w-[60px] h-[60px] mb-5 rounded-full bg-red-400 border-2">
+                                    <img src="images/rafi.jpg" alt="" class="w-[60px] h-[60px] rounded-full">
+                                </div>
+                                <h2 class="font-medium text-xl">Rafi</h2>
+                                <div class="flex text-yellow-400">
+                                    <p>&#9733;</p><p>&#9733;</p><p>&#9733;</p><p>&#9733;</p><p>&#9733;</p>
+                                </div>
+                            </div>
+                            <div class="h-1/2 w-full">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem distinctio quas, dicta, voluptate quidem eveniet aperiam eius reprehenderit optio dolores. Quasi, voluptatibus.</p>
+                            </div>
+                        </div>
+            
+                        <!-- Testimonial 3 -->
+                        <div class="swiper-slide w-[25rem] h-[50rem] flex flex-col items-center justify-center shadow-[-5px_5px_0px_0px_rgba(0,0,0)] px-4 border-3 rounded-sm bg-white">
+                            <div class="h-1/2 w-full flex flex-col justify-center items-center">
+                                <div class="w-[60px] h-[60px] mb-5 rounded-full bg-red-400 border-2">
+                                    <img src="images/fajar.jpg" alt="" class="w-[60px] h-[60px] rounded-full">
+                                </div>
+                                <h2 class="font-medium text-xl">Fajar</h2>
+                                <div class="flex text-yellow-400">
+                                    <p>&#9733;</p><p>&#9733;</p><p>&#9733;</p><p>&#9733;</p><p>&#9733;</p>
+                                </div>
+                            </div>
+                            <div class="h-1/2 w-full">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem distinctio quas, dicta, voluptate quidem eveniet aperiam eius reprehenderit optio dolores. Quasi, voluptatibus.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide w-[25rem] h-[50rem] flex flex-col items-center justify-center shadow-[-5px_5px_0px_0px_rgba(0,0,0)] px-4 border-3 rounded-sm bg-white">
+                            <div class="h-1/2 w-full flex flex-col justify-center items-center">
+                                <div class="w-[60px] h-[60px] mb-5 rounded-full bg-red-400 border-2">
+                                    <img src="images/rafi.jpg" alt="" class="w-[60px] h-[60px] rounded-full">
+                                </div>
+                                <h2 class="font-medium text-xl">Rafi</h2>
+                                <div class="flex text-yellow-400">
+                                    <p>&#9733;</p><p>&#9733;</p><p>&#9733;</p><p>&#9733;</p><p>&#9733;</p>
+                                </div>
+                            </div>
+                            <div class="h-1/2 w-full">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem distinctio quas, dicta, voluptate quidem eveniet aperiam eius reprehenderit optio dolores. Quasi, voluptatibus.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide w-[25rem] h-[50rem] flex flex-col items-center justify-center shadow-[-5px_5px_0px_0px_rgba(0,0,0)] px-4 border-3 rounded-sm bg-white">
+                            <div class="h-1/2 w-full flex flex-col justify-center items-center">
+                                <div class="w-[60px] h-[60px] mb-5 rounded-full bg-red-400 border-2">
+                                    <img src="images/adel.jpg" alt="" class="w-[60px] h-[60px] rounded-full">
+                                </div>
+                                <h2 class="font-medium text-xl">Adel</h2>
+                                <div class="flex text-yellow-400">
+                                    <p>&#9733;</p><p>&#9733;</p><p>&#9733;</p><p>&#9733;</p><p>&#9733;</p>
+                                </div>
+                            </div>
+                            <div class="h-1/2 w-full">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem distinctio quas, dicta, voluptate quidem eveniet aperiam eius reprehenderit optio dolores. Quasi, voluptatibus.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide w-[25rem] h-[50rem] flex flex-col items-center justify-center shadow-[-5px_5px_0px_0px_rgba(0,0,0)] px-4 border-3 rounded-sm bg-white">
+                            <div class="h-1/2 w-full flex flex-col justify-center items-center">
+                                <div class="w-[60px] h-[60px] mb-5 rounded-full bg-red-400 border-2">
+                                    <img src="images/siti.jpg" alt="" class="w-[60px] h-[60px] rounded-full">
+                                </div>
+                                <h2 class="font-medium text-xl">Siti</h2>
+                                <div class="flex text-yellow-400">
+                                    <p>&#9733;</p><p>&#9733;</p><p>&#9733;</p><p>&#9733;</p><p>&#9733;</p>
+                                </div>
+                            </div>
+                            <div class="h-1/2 w-full">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem distinctio quas, dicta, voluptate quidem eveniet aperiam eius reprehenderit optio dolores. Quasi, voluptatibus.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide w-[25rem] h-[50rem] flex flex-col items-center justify-center shadow-[-5px_5px_0px_0px_rgba(0,0,0)] px-4 border-3 rounded-sm bg-white">
+                            <div class="h-1/2 w-full flex flex-col justify-center items-center">
+                                <div class="w-[60px] h-[60px] mb-5 rounded-full bg-red-400 border-2">
+                                    <img src="images/dian.jpg" alt="" class="w-[60px] h-[60px] rounded-full">
+                                </div>
+                                <h2 class="font-medium text-xl">Dian</h2>
+                                <div class="flex text-yellow-400">
+                                    <p>&#9733;</p><p>&#9733;</p><p>&#9733;</p><p>&#9733;</p><p>&#9733;</p>
+                                </div>
+                            </div>
+                            <div class="h-1/2 w-full">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem distinctio quas, dicta, voluptate quidem eveniet aperiam eius reprehenderit optio dolores. Quasi, voluptatibus.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="nextBtn" class="hidden md:block absolute right-[-3rem] top-1/2 transform -translate-y-1/2 bg-blue-300 text-black border-2 w-[50px] h-[50px] rounded-md shadow-[5px_5px_0px_0px_rgba(0,0,0)] z-10">
+                    &#9655;
+                </button>
+            </div>
             
         </section>
     </main>
 
     <script src="index.js"></script>
     <script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const swiper = new Swiper(".swiper", {
+        centeredSlides: false,
+        slidesPerGroupSkip: 1,
+        slidesPerView: 1, 
+        spaceBetween: 50,
+        navigation: {
+            nextEl: "#nextBtn",
+            prevEl: "#prevBtn",
+        },
+        loop: false, // Membuat slider looping
+        breakpoints: {
+            640: { slidesPerView: 1 }, // Menampilkan 1 card di mobile
+            768: { slidesPerView: 3 }, // Menampilkan 2 card di tablet
+            1024: { slidesPerView: 3 }, // Menampilkan 3 card di desktop
+        },
+    });
+});
+
+      </script>
+      
 </body>
 </html>
