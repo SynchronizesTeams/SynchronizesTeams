@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <style>
         .swiper-slide {
             height: auto !important;
@@ -24,12 +26,13 @@
                 min-width: 100%;
             }
         }
+
     </style>
 
 </head>
 <body class="px-4 md:px-64">
      <!-- Navbar -->
-     <nav class="w-full py-4 flex justify-center h-fit">
+     <nav class="w-full py-4 flex flex-col justify-center h-fit">
         <header class="w-full md:pl-6 border-3 h-20 md:gap-10 flex items-center justify-between rounded-md bg-white">
             <!-- Logo -->
             <div class="flex w-full items-center justify-center">
@@ -41,13 +44,13 @@
             <!-- Desktop Navigation -->
             <div class="hidden md:flex h-full items-center">
                 <ul class="flex h-full items-center font-['Poppins'] font-semibold text-xl">
-                    <li class="w-42 border-l-2 h-full flex justify-center items-center bg-blue-200 transition hover:bg-blue-400">
+                    <!-- <li class="w-42 border-l-2 h-full flex justify-center items-center bg-blue-200 transition hover:bg-blue-400">
                         <a href="index.html" class="w-full h-full flex justify-center items-center">Home</a>
                     </li>
                     <li class="w-42 border-x-2 h-full flex justify-center items-center transition hover:bg-blue-400">
                         <a href="about.html" class="w-full h-full flex justify-center items-center">About Us</a>
-                    </li>
-                    <li class="w-42 h-full flex justify-center items-center transition hover:bg-blue-400">
+                    </li> -->
+                    <li class="w-42 h-full flex justify-center border-l-2 bg-blue-200 items-center transition hover:bg-blue-400">
                         <a href="contact.html" class="w-full h-full flex justify-center items-center">Contact</a>
                     </li>
                 </ul>
@@ -70,17 +73,17 @@
         </ul>
     </div>    
 
-    <main class="w-full">
-        <div class="flex-col flex md:flex-row items-center mb-10">
-            <img src="images/banner2.png" alt="" class="w-[30rem]">
+    <main class="w-full h-screen">
+        <div class="flex-col flex md:flex-row items-center justify-start mb-10 bg-slate-200 h-[50%] rounded-xl border-2">
+            <img src="images/banner2.png" alt="" id="banner" class="w-[30rem]">
             <div class="flex flex-col">
                 <p class="w-full flex justify-center font-['Poppins'] font-semibold text-2xl mb-5">Welcome to <span class="underline ml-[5px]">SynchronizeTeams</span></p>
-                <h2 class="font-['Poppins'] font-bold text-4xl text-center">Where <span class="text-blue-500">Innovation</span> Meets <span class="text-blue-500">Collaboration</span>.</h2>
-                <p class="w-full flex justify-center font-['Poppins'] mt-5 mb-5 text-center">
-                    We're on a mission to drive forward in the tech world, bringing together dynamic minds and pioneering.  Join us as we sync up ideas, technology, and teamwork to create a future where anything is possible.
+                <h2 class="font-['Poppins'] font-bold text-4xl text-center" id="main-title">Where <span class="text-blue-500">Innovation</span> Meets <span class="text-blue-500">Collaboration</span>.</h2>
+                <p class="w-full flex justify-center font-['Poppins'] mt-5 mb-5 text-center" id="main-text">
+                    Synchronize Teams is more than just an IT service provider—we are your digital partner in creating tailored solutions that drive success. We believe technology should work for you, not against you. That’s why we offer customized, scalable, and cost-effective solutions, including software development, website creation, app development, video editing, copywriting, and various other digital services.
                 </p>
                 <div class="w-full flex justify-center">
-                    <div id="card" class="w-full  md:w-1/2 h-24 bg-blue-200 shadow-[5px_5px_0px_0px_rgba(0,0,0)] px-2 border-3 rounded-sm">
+                    <div id="card" class="w-full  md:w-1/2 h-24 bg-blue-200 shadow-[5px_5px_0px_0px_rgba(0,0,0)] transition-all hover:shadow-none hover:translate-x-2 hover:translate-y-2 px-2 border-3 rounded-sm">
                         <div class="flex justify-around items-center h-full">
                             <div>
                                 <h2 class="font-semibold text-2xl">+22</h2>
@@ -101,18 +104,26 @@
         </div>
 
         <section class="mb-20">
-            <h2 class="font-['Poppins'] font-bold text-4xl text-center">About us</h2>
+            <h2 class="font-['Poppins'] font-semibold text-4xl text-left mb-5 bg-blue-200 w-fit px-4 py-2 rounded-lg border-2 shadow-[5px_5px_0px_0px_rgba(0,0,0)] transition-all hover:shadow-none hover:translate-x-2 hover:translate-y-2">Latest Projects</h2>
             <div>
-                <p class="w-full flex justify-center font-['Poppins'] mt-5 mb-5 font-medium text-base text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quo eos vel. Est minus modi non fugiat dolorum sapiente debitis vero similique. Eius fugit similique quam laborum voluptas nihil in.</p>
+                <p>lmao diks</p>
+            </div>
+        </section>
+
+        <section class="mb-25">
+            <h2 class="font-['Poppins'] mb-5 font-semibold text-4xl text-left bg-blue-200 w-fit px-4 py-2 rounded-lg border-2 shadow-[5px_5px_0px_0px_rgba(0,0,0)] transition-all hover:shadow-none hover:translate-x-2 hover:translate-y-2">About us</h2>
+            <div class="flex flex-col justify-center space-y-20">
+                <p id="about-text" class="text-4xl font-medium text-gray-400 leading-snug transition-all duration-1000 text-left max-w-4xl">At Synchronize Teams, we specialize in delivering custom, flexible, and affordable IT solutions to help businesses and individuals thrive in the digital landscape. With a team driven by integrity, adaptability, and experience, we focus on crafting solutions that not only meet expectations but exceed them. Whether you’re looking to launch a new website, develop a software solution, or enhance your digital presence, we are here to make it happen. Sync with Us and bring your ideas to life!</p>
             </div>
         </section>
 
         <div class="mb-20">
-            <h2 class="font-['Poppins'] font-bold text-4xl text-center mb-20">Our Services</h2>
+            <h2 class="font-['Poppins'] font-semibold text-4xl text-left mb-5 bg-blue-200 w-fit px-4 py-2 rounded-lg border-2 shadow-[5px_5px_0px_0px_rgba(0,0,0)] transition-all hover:shadow-none hover:translate-x-2 hover:translate-y-2">Our Services</h2>
+            <p class="mb-20 font-semibold text-2xl max-w-[50%]">We provide a range of specialized services, including software development, website creation, app development, video editing, copywriting, and various other digital services.</p>
             <div class="md:flex flex-col gap-20 ">
                 <div class="w-full md:flex block justify-center gap-3">
                     <!-- first service -->
-                    <div class="md:w-1/3 md:h-60 h-64 flex justify-center mb-20 relative flex-col p-4 shadow-[-5px_5px_0px_0px_rgba(0,0,0)] px-2 border-3 rounded-sm">
+                    <div class="md:w-1/3 md:h-60 h-64 flex justify-center mb-20 relative flex-col p-4 shadow-[-5px_5px_0px_0px_rgba(0,0,0)] px-2  transition-all hover:shadow-none hover:-translate-x-2 hover:translate-y-2 border-3 rounded-sm">
                         <div class="w-[5rem] h-[5rem] bg-red-400 absolute top-0 left-10 transform  -translate-y-1/2 rounded-lg flex items-center justify-center border-3">
                             <img src="images/webdev.png" width="80%" alt="">
                         </div>
@@ -120,7 +131,7 @@
                         <p class="font-semibold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex quo, fuga veniam consequatur voluptates reprehenderit est, quidem quia expedita consectetur quis maxime optio tempore! Quae nisi esse incidunt debitis cum.</p>
                     </div>
                     <!-- second services -->
-                    <div class="md:w-1/3 h-60 flex justify-center mb-20 relative flex-col p-4 shadow-[-5px_5px_0px_0px_rgba(0,0,0)] px-2 border-3 rounded-sm">
+                    <div class="md:w-1/3 h-60 flex justify-center mb-20 relative flex-col p-4 shadow-[-5px_5px_0px_0px_rgba(0,0,0)] transition-all hover:shadow-none hover:-translate-x-2 hover:translate-y-2 px-2 border-3 rounded-sm">
                         <div class="w-[5rem] h-[5rem] bg-red-400 absolute top-0 left-10 transform  -translate-y-1/2 rounded-lg flex items-center justify-center border-3">
                             <img src="images/gamedev.png" width="80%" alt="">
                         </div>
@@ -128,7 +139,7 @@
                         <p class="font-semibold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex quo, fuga veniam consequatur voluptates reprehenderit est, quidem quia expedita consectetur quis maxime optio tempore! Quae nisi esse incidunt debitis cum.</p>
                     </div>
                     <!-- third services -->
-                    <div class="md:w-1/3 h-60 flex justify-center mb-20 relative flex-col p-4 shadow-[-5px_5px_0px_0px_rgba(0,0,0)] px-2 border-3 rounded-sm">
+                    <div class="md:w-1/3 h-60 flex justify-center mb-20 relative flex-col p-4 shadow-[-5px_5px_0px_0px_rgba(0,0,0)] transition-all hover:shadow-none hover:-translate-x-2 hover:translate-y-2 px-2 border-3 rounded-sm">
                         <div class="w-[5rem] h-[5rem] bg-red-400 absolute top-0 left-10 transform  -translate-y-1/2 rounded-lg flex items-center justify-center border-3">
                             <img src="images/mobiledev.png" width="80%" alt="">
                         </div>
@@ -138,7 +149,7 @@
                 </div>
                 <div class="w-full md:flex block items-center justify-center gap-3">
                     <!-- fourth service -->
-                    <div class="md:w-1/3 h-60 flex justify-center mb-20 relative flex-col p-4 shadow-[-5px_5px_0px_0px_rgba(0,0,0)] px-2 border-3 rounded-sm">
+                    <div class="md:w-1/3 h-60 flex justify-center mb-20 relative flex-col p-4 shadow-[-5px_5px_0px_0px_rgba(0,0,0)] transition-all hover:shadow-none hover:-translate-x-2 hover:translate-y-2 px-2 border-3 rounded-sm">
                         <div class="w-[5rem] h-[5rem] bg-red-400 absolute top-0 left-10 transform  -translate-y-1/2 rounded-lg flex items-center justify-center border-3">
                             <img src="images/cysec.png" width="80%" alt="">
                         </div>
@@ -146,7 +157,7 @@
                         <p class="font-semibold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex quo, fuga veniam consequatur voluptates reprehenderit est, quidem quia expedita consectetur quis maxime optio tempore! Quae nisi esse incidunt debitis cum.</p>
                     </div>
                     <!-- fifth services -->
-                    <div class="md:w-1/3 h-60 flex mb-20 justify-center relative flex-col p-4 shadow-[-5px_5px_0px_0px_rgba(0,0,0)] px-2 border-3 rounded-sm">
+                    <div class="md:w-1/3 h-60 flex mb-20 justify-center relative flex-col p-4 shadow-[-5px_5px_0px_0px_rgba(0,0,0)] transition-all hover:shadow-none hover:-translate-x-2 hover:translate-y-2 px-2 border-3 rounded-sm">
                         <div class="w-[5rem] h-[5rem] bg-red-400 absolute top-0 left-10 transform  -translate-y-1/2 rounded-lg flex items-center justify-center border-3">
                             <img src="images/graphicdesign.png" width="80%" alt="">
                         </div>
@@ -154,7 +165,7 @@
                         <p class="font-semibold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex quo, fuga veniam consequatur voluptates reprehenderit est, quidem quia expedita consectetur quis maxime optio tempore! Quae nisi esse incidunt debitis cum.</p>
                     </div>
                     <!-- sixth services -->
-                    <div class="md:w-1/3 h-60 flex mb-20 justify-center relative flex-col p-4 shadow-[-5px_5px_0px_0px_rgba(0,0,0)] px-2 border-3 rounded-sm">
+                    <div class="md:w-1/3 h-60 flex mb-20 transition-all hover:shadow-none hover:-translate-x-2 hover:translate-y-2 justify-center relative flex-col p-4 shadow-[-5px_5px_0px_0px_rgba(0,0,0)] px-2 border-3 rounded-sm">
                         <div class="w-[5rem] h-[5rem] bg-red-400 absolute top-0 left-10 transform  -translate-y-1/2 rounded-lg flex items-center justify-center border-3">
                             <img src="images/videoediting.png" width="80%" alt="">
                         </div>
@@ -165,150 +176,101 @@
             </div>
         </div>
 
-        <section class="mb-10">
-            <h2 class="font-['Poppins'] font-bold text-4xl text-center mb-10">Testimonials</h2>
-            <div class="relative w-full px-6">
-                <button id="prevBtn" class="hidden md:block absolute left-[-3rem] top-1/2 transform -translate-y-1/2 bg-blue-300 text-black w-[50px] h-[50px] border-2 shadow-[-5px_5px_0px_0px_rgba(0,0,0)] rounded-md z-10">
-                    &#9665;
-                </button>
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper md:px-2 h-[50rem]">
-                        <!-- Testimonial 1 -->
-                        <div class="swiper-slide w-[25rem] h-[50rem] flex flex-col items-center justify-center shadow-[-5px_5px_0px_0px_rgba(0,0,0)] px-4 border-3 rounded-sm bg-white">
-                            <div class="h-1/2 w-full flex flex-col justify-center items-center">
-                                <div class="w-[60px] h-[60px] mb-5 rounded-full bg-red-400 border-2">
-                                    <img src="images/adly.jpg" alt="" class="w-[60px] h-[60px] rounded-full">
-                                </div>
-                                <h2 class="font-medium text-xl">Adly Fahreza</h2>
-                                <div class="flex text-yellow-400">
-                                    <p>&#9733;</p><p>&#9733;</p><p>&#9733;</p><p>&#9733;</p><p>&#9733;</p>
-                                </div>
-                            </div>
-                            <div class="h-1/2 w-full">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem distinctio quas, dicta, voluptate quidem eveniet aperiam eius reprehenderit optio dolores. Quasi, voluptatibus.</p>
-                            </div>
-                        </div>
-            
-                        <!-- Testimonial 2 -->
-                        <div class="swiper-slide w-[25rem] h-[50rem] flex flex-col items-center justify-center shadow-[-5px_5px_0px_0px_rgba(0,0,0)] px-4 border-3 rounded-sm bg-white">
-                            <div class="h-1/2 w-full flex flex-col justify-center items-center">
-                                <div class="w-[60px] h-[60px] mb-5 rounded-full bg-red-400 border-2">
-                                    <img src="images/rafi.jpg" alt="" class="w-[60px] h-[60px] rounded-full">
-                                </div>
-                                <h2 class="font-medium text-xl">Rafi</h2>
-                                <div class="flex text-yellow-400">
-                                    <p>&#9733;</p><p>&#9733;</p><p>&#9733;</p><p>&#9733;</p><p>&#9733;</p>
-                                </div>
-                            </div>
-                            <div class="h-1/2 w-full">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem distinctio quas, dicta, voluptate quidem eveniet aperiam eius reprehenderit optio dolores. Quasi, voluptatibus.</p>
-                            </div>
-                        </div>
-            
-                        <!-- Testimonial 3 -->
-                        <div class="swiper-slide w-[25rem] h-[50rem] flex flex-col items-center justify-center shadow-[-5px_5px_0px_0px_rgba(0,0,0)] px-4 border-3 rounded-sm bg-white">
-                            <div class="h-1/2 w-full flex flex-col justify-center items-center">
-                                <div class="w-[60px] h-[60px] mb-5 rounded-full bg-red-400 border-2">
-                                    <img src="images/fajar.jpg" alt="" class="w-[60px] h-[60px] rounded-full">
-                                </div>
-                                <h2 class="font-medium text-xl">Fajar</h2>
-                                <div class="flex text-yellow-400">
-                                    <p>&#9733;</p><p>&#9733;</p><p>&#9733;</p><p>&#9733;</p><p>&#9733;</p>
-                                </div>
-                            </div>
-                            <div class="h-1/2 w-full">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem distinctio quas, dicta, voluptate quidem eveniet aperiam eius reprehenderit optio dolores. Quasi, voluptatibus.</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide w-[25rem] h-[50rem] flex flex-col items-center justify-center shadow-[-5px_5px_0px_0px_rgba(0,0,0)] px-4 border-3 rounded-sm bg-white">
-                            <div class="h-1/2 w-full flex flex-col justify-center items-center">
-                                <div class="w-[60px] h-[60px] mb-5 rounded-full bg-red-400 border-2">
-                                    <img src="images/rafi.jpg" alt="" class="w-[60px] h-[60px] rounded-full">
-                                </div>
-                                <h2 class="font-medium text-xl">Rafi</h2>
-                                <div class="flex text-yellow-400">
-                                    <p>&#9733;</p><p>&#9733;</p><p>&#9733;</p><p>&#9733;</p><p>&#9733;</p>
-                                </div>
-                            </div>
-                            <div class="h-1/2 w-full">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem distinctio quas, dicta, voluptate quidem eveniet aperiam eius reprehenderit optio dolores. Quasi, voluptatibus.</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide w-[25rem] h-[50rem] flex flex-col items-center justify-center shadow-[-5px_5px_0px_0px_rgba(0,0,0)] px-4 border-3 rounded-sm bg-white">
-                            <div class="h-1/2 w-full flex flex-col justify-center items-center">
-                                <div class="w-[60px] h-[60px] mb-5 rounded-full bg-red-400 border-2">
-                                    <img src="images/adel.jpg" alt="" class="w-[60px] h-[60px] rounded-full">
-                                </div>
-                                <h2 class="font-medium text-xl">Adel</h2>
-                                <div class="flex text-yellow-400">
-                                    <p>&#9733;</p><p>&#9733;</p><p>&#9733;</p><p>&#9733;</p><p>&#9733;</p>
-                                </div>
-                            </div>
-                            <div class="h-1/2 w-full">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem distinctio quas, dicta, voluptate quidem eveniet aperiam eius reprehenderit optio dolores. Quasi, voluptatibus.</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide w-[25rem] h-[50rem] flex flex-col items-center justify-center shadow-[-5px_5px_0px_0px_rgba(0,0,0)] px-4 border-3 rounded-sm bg-white">
-                            <div class="h-1/2 w-full flex flex-col justify-center items-center">
-                                <div class="w-[60px] h-[60px] mb-5 rounded-full bg-red-400 border-2">
-                                    <img src="images/siti.jpg" alt="" class="w-[60px] h-[60px] rounded-full">
-                                </div>
-                                <h2 class="font-medium text-xl">Siti</h2>
-                                <div class="flex text-yellow-400">
-                                    <p>&#9733;</p><p>&#9733;</p><p>&#9733;</p><p>&#9733;</p><p>&#9733;</p>
-                                </div>
-                            </div>
-                            <div class="h-1/2 w-full">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem distinctio quas, dicta, voluptate quidem eveniet aperiam eius reprehenderit optio dolores. Quasi, voluptatibus.</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide w-[25rem] h-[50rem] flex flex-col items-center justify-center shadow-[-5px_5px_0px_0px_rgba(0,0,0)] px-4 border-3 rounded-sm bg-white">
-                            <div class="h-1/2 w-full flex flex-col justify-center items-center">
-                                <div class="w-[60px] h-[60px] mb-5 rounded-full bg-red-400 border-2">
-                                    <img src="images/dian.jpg" alt="" class="w-[60px] h-[60px] rounded-full">
-                                </div>
-                                <h2 class="font-medium text-xl">Dian</h2>
-                                <div class="flex text-yellow-400">
-                                    <p>&#9733;</p><p>&#9733;</p><p>&#9733;</p><p>&#9733;</p><p>&#9733;</p>
-                                </div>
-                            </div>
-                            <div class="h-1/2 w-full">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem distinctio quas, dicta, voluptate quidem eveniet aperiam eius reprehenderit optio dolores. Quasi, voluptatibus.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button id="nextBtn" class="hidden md:block absolute right-[-3rem] top-1/2 transform -translate-y-1/2 bg-blue-300 text-black border-2 w-[50px] h-[50px] rounded-md shadow-[5px_5px_0px_0px_rgba(0,0,0)] z-10">
-                    &#9655;
-                </button>
+        <section class="mb-10 h-screen">
+            <h2 class="font-['Poppins'] font-semibold text-4xl text-left mb-10 bg-blue-200 px-4 py-2 w-fit rounded-lg border-2 shadow-[5px_5px_0px_0px_rgba(0,0,0)] transition-all hover:shadow-none hover:translate-x-2 hover:translate-y-2">Testimonials</h2>
+            <div>
+                <h2 id="testimoni-text" class="font-['Poppins'] max-w-[70%] font-semibold text-4xl text-left mb-6 transition-opacity duration-500 ">
+                    "SynchronizeTeams is a game-changer for our team. Their attention to detail and commitment to quality has made our project a success."
+                </h2>
+                <p id="testimoni-name" class="font-semibold text-2xl font-['Poppins'] transition-opacity duration-500">
+                    Adly Fahreza
+                </p>
+                <p id="testimoni-role" class="font-medium font-['Poppins'] transition-opacity duration-500">
+                    Backend Developer, SynchronizeTeams
+                </p>
             </div>
-            
+            <div class="mt-6 flex justify-start space-x-3">
+                <button class="cursor-pointer testimoni-btn w-4 h-4 bg-blue-300 rounded-full" data-index="0"></button>
+                <button class="cursor-pointer testimoni-btn w-4 h-4 bg-blue-300 rounded-full" data-index="1"></button>
+                <button class="cursor-pointer testimoni-btn w-4 h-4 bg-blue-300 rounded-full" data-index="2"></button>
+            </div>
         </section>
     </main>
 
     <script src="index.js"></script>
     <script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-    const swiper = new Swiper(".swiper", {
-        centeredSlides: false,
-        slidesPerGroupSkip: 1,
-        slidesPerView: 1, 
-        spaceBetween: 50,
-        navigation: {
-            nextEl: "#nextBtn",
-            prevEl: "#prevBtn",
-        },
-        loop: false, // Membuat slider looping
-        breakpoints: {
-            640: { slidesPerView: 1 }, // Menampilkan 1 card di mobile
-            768: { slidesPerView: 3 }, // Menampilkan 2 card di tablet
-            1024: { slidesPerView: 3 }, // Menampilkan 3 card di desktop
-        },
-    });
-});
+        const testimonies = [
+            {
+                text: `"SynchronizeTeams is a game-changer for our team. Their attention to detail and commitment to quality has made our project a success."`,
+                name: "Adly Fahreza",
+                role: "Backend Developer, SynchronizeTeams"
+            },
+            {
+                text: `"I have never worked with a team as dedicated and professional as SynchronizeTeams. Their expertise is unmatched!"`,
+                name: "Rahma Putri",
+                role: "UI/UX Designer, Creative Labs"
+            },
+            {
+                text: `"Choosing SynchronizeTeams was the best decision for our company. Their innovative solutions helped us scale rapidly."`,
+                name: "Dimas Anggara",
+                role: "CEO, TechGrow"
+            }
+        ];
 
-      </script>
-      
+        const textElement = document.getElementById("testimoni-text");
+        const nameElement = document.getElementById("testimoni-name");
+        const roleElement = document.getElementById("testimoni-role");
+        const buttons = document.querySelectorAll(".testimoni-btn");
+
+        buttons.forEach((button, index) => {
+            button.addEventListener("click", () => {
+                // Tambahkan efek animasi
+                textElement.classList.add("opacity-0");
+                nameElement.classList.add("opacity-0");
+                roleElement.classList.add("opacity-0");
+
+                setTimeout(() => {
+                    // Ganti testimoni setelah animasi menghilang
+                    textElement.innerText = testimonies[index].text;
+                    nameElement.innerText = testimonies[index].name;
+                    roleElement.innerText = testimonies[index].role;
+
+                    // Animasi fade-in kembali
+                    textElement.classList.remove("opacity-0");
+                    nameElement.classList.remove("opacity-0");
+                    roleElement.classList.remove("opacity-0");
+
+                    // Update warna tombol aktif
+                    buttons.forEach(btn => btn.classList.remove("bg-blue-500"));
+                    button.classList.add("bg-blue-500");
+                }, 300);
+            });
+        });
+        buttons[0].classList.add("bg-blue-500");
+
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const textElement = document.getElementById("about-text");
+            const words = textElement.innerHTML.split(" ");
+            textElement.innerHTML = words.map(word => `<span class="text-gray-400 transition-colors duration-1000">${word} </span>`).join("");
+
+            const spans = textElement.querySelectorAll("span");
+
+            gsap.to(spans, {
+                color: "#000", // Warna berubah jadi hitam
+                stagger: 0.2,  // Perubahan warna per kata
+                duration: 0.5,
+                scrollTrigger: {
+                    trigger: textElement,
+                    start: "top 70%", // Animasi dimulai saat teks hampir masuk viewport
+                    end: "top 20%",   // Animasi selesai setelah sebagian besar teks terlihat
+                    scrub: true
+                }
+            });
+        });
+    </script>
 </body>
 </html>
